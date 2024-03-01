@@ -1,0 +1,394 @@
+// Globals
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $open-sans;
+    line-height: 150%;
+}
+
+body {
+    background-color: $color-light;
+}
+
+.layout {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(181.86deg, #CDFDE2 1.4%, #E6F5F3 17.8%, #F0F3E1 102.91%);
+
+    .vec_rlv {
+        position: absolute;
+        @include breakpoints-up(sm) {
+            width: 273px;
+            height: 400px;
+        }
+        @include breakpoints-between(xs, sm) {
+            width: 183px;
+            height: 290px;
+        }
+        @include breakpoints-down(xs) {
+            width: 83px;
+            height: 190px;
+        }
+        &.vector_1 {
+            top: 0;
+            left: 0;
+        }
+        &.vector_2 {
+            top: 0;
+            right: 0;
+        }
+        .vec_abs {
+            position: absolute;
+            object-fit: cover;
+        }
+    }
+
+    footer {
+        margin-top: auto;
+    }
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button, input, textarea, select {
+    outline: none;
+    border: none;
+}
+button, a, .cursor_pointer {
+    cursor: pointer;
+}
+
+::placeholder {
+    color: rgba(90, 90, 90, 0.80);
+}
+
+:-moz-placeholder {
+    color: rgba(90, 90, 90, 0.80);
+}
+
+::-moz-placeholder {
+    color: rgba(90, 90, 90, 0.80);
+}
+
+:-ms-input-placeholder {
+    color: rgba(90, 90, 90, 0.80);
+}
+
+.h1 {
+    @include font-styles(700, 48px);
+
+    @include breakpoints-down(sm) {
+        @include font-styles(500, 30px);
+    }
+}
+
+.h2 {
+    @include font-styles(600, 38px);
+
+    @include breakpoints-down(sm) {
+        @include font-styles(500, 22px);
+    }
+}
+
+.h3 {
+    @include font-styles(600, 32px);
+
+    @include breakpoints-down(sm) {
+        @include font-styles(500, 20px);
+    }
+}
+
+.h4 {
+    @include font-styles(600, 24px);
+
+    @include breakpoints-down(sm) {
+        @include font-styles(500, 18px);
+    }
+}
+
+.h5 {
+    @include font-styles(600, 20px);
+
+    @include breakpoints-down(sm) {
+        @include font-styles(500, 16px);
+    }
+}
+
+.h6_normal {
+    @include font-styles(600, 18px);
+
+    @include breakpoints-down(sm) {
+        @include font-styles(500, 14px);
+    }
+}
+
+.h6_small {
+    @include font-styles(600, 16px);
+
+    @include breakpoints-down(sm) {
+        @include font-styles(500, 13px);
+    } 
+}
+
+.p_normal, .span_normal {
+    font-weight: 400;
+    font-size: 16px !important;
+    @include breakpoints-down(sm) {
+        font-size: 13px !important;
+    }
+}
+
+.p_small, .span_small {
+    font-weight: 400;
+    font-size: 14px !important;
+    @include breakpoints-down(sm) {
+        font-size: 12px !important;
+    }
+}
+
+.p_mediumsmall {
+    font-weight: 400;
+    font-size: 12px !important;
+    @include breakpoints-down(sm) {
+        font-size: 11px !important;
+    }
+}
+
+.p_supersmall {
+    font-size: 11px !important;
+    @include breakpoints-down(sm) {
+        font-size: 10px !important;
+    }
+}
+
+.text_center {
+    text-align: center;
+}
+
+.opacity_1 {
+    opacity: 1;
+}
+.opacity_0 {
+    opacity: 0;
+}
+
+.visible {
+    visibility: visible;
+}
+.invisible {
+    visibility: hidden;
+}
+
+.display_none {
+    display: none;
+}
+.display_revert {
+    display: block;
+}
+
+.word_wrap {
+    word-wrap: break-all;
+}
+.no_wrap {
+    white-space: nowrap;
+}
+
+.overflow_x_auto {
+    overflow-x: auto;
+}
+
+pre {
+    white-space: pre-wrap;       /* Since CSS 2.1 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
+.title_1_row, .title_2_row, .title_3_row {
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    overflow: hidden;
+}
+.title_1_row {
+    -webkit-line-clamp: 1;
+}
+.title_2_row {
+    -webkit-line-clamp: 2;
+}
+.title_3_row {
+    -webkit-line-clamp: 3;
+}
+
+.logo_dinas {
+    cursor: pointer;
+    user-select: none;
+}
+
+.form_search {
+    padding: 8px;
+    border-radius: 30px;
+    border: 1px solid #D2D5DB;
+    background: $color-light;
+    display: flex;
+    justify-content: space-between;
+    gap: 11px;
+
+    input {
+        padding: 5px;
+        width: 250px;
+        color: $color-gray;
+        @include breakpoints-down(sm) {
+            width: 200px;
+        }
+        &::placeholder {
+            font-weight: 500;
+            font-family: $mulish;
+        }
+    }
+
+    button {
+        color: $color-light;
+        padding: 5px 20px;
+        border-radius: 30px;
+        background: $color-primary;
+    }
+}
+
+.form_simple_search {
+    width: max-content;
+    border-radius: 30px;
+    overflow: hidden;
+    border: 1px solid #CFD0D7;
+    background: $color-light;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 16px;
+
+    img {
+        @include breakpoints-down(sm) {
+            transform: scale(0.8);
+        }
+    }
+
+    input {
+        color: $color-gray;
+        @include breakpoints-up(sm) {
+            width: 320px;
+        }
+        @include breakpoints-down(sm) {
+            width: 200px;
+        }
+
+        &::placeholder {
+            font-weight: 400;
+            font-family: $mulish;
+        }
+    }
+}
+
+.pagination {
+    padding: 20px 0;
+
+    ul {
+        justify-content: flex-end;
+    }
+    
+    li > button.Mui-selected {
+        color: $color-light;
+        background: $color-secondary;
+    }
+}
+
+.prev_page {
+    span {
+        @include font-styles(400, 16px);
+        color: rgba($color: #4B4B4B, $alpha: 0.8);
+        @include breakpoints-down(sm) {
+            @include font-styles(400, 12px);
+        }
+
+        &.link {
+            transition: $main-transition;
+            &:hover {
+                color: rgba($color: #4B4B4B, $alpha: 1.0);
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.active_page {
+    @include font-styles(500, 16px);
+    color: $color-dark;
+    @include breakpoints-down(sm) {
+        @include font-styles(500, 12px);
+    }
+}
+
+.btn_bg_blue, .btn_border_blue {
+    padding: 16px 32px;
+    border-radius: 40px;
+    @include breakpoints-down(xs) {
+        padding: 10px 16px;
+    }
+}
+.btn_bg_blue {
+    color: #fff;
+    border: 1px solid #D9DCE7;
+    background: $color-secondary;
+}
+.btn_border_blue {
+    color: $color-secondary;
+    border: 1px solid $color-secondary;
+    background: $color-light;
+}
+
+.label_status {
+    text-align: center;
+    padding: 3px 16px;
+    border-radius: 20px;
+    color: $color-light;
+    width: 96px;
+}
+.indikator_ditolak {
+    background: #EB3323;
+}
+.indikator_proses {
+    background: $color-primary;
+}
+.indikator_selesai {
+    background: #64BE7A;
+}
+
+.separator_horizontal {
+    width: 100%;
+    height: 1px;
+    background: #D9DCE7;
+}
+
+.scroll_custom {
+    scroll-behavior: smooth;    
+    /* membuat container atau wadah dari scrollbar dengan lebar 20px */
+    &::-webkit-scrollbar {
+        width: 0px;
+    }
+    /* membuat background dari scrollbar */
+    &::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+    /* membuat styling pada batang atau bar scrollbar */
+    &::-webkit-scrollbar-thumb {
+        background: transparent;
+    }
+}

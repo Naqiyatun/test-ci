@@ -1,0 +1,20 @@
+footer {
+    background: linear-gradient(143.9deg, #2A90B8 6.96%, #2976A3 40.08%, #274D84 90.84%);
+    padding: 10px 0;
+    
+    .flex_logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        @include breakpoints-up(sm) {
+            gap: 40px;
+        }
+        @include breakpoints-between(xs, sm) {
+            gap: 20px;
+        }
+        @include breakpoints-down(xs) {
+            gap: 8px;
+        }
+    }
+}

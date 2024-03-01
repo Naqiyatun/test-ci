@@ -1,0 +1,14 @@
+// Globals
+@import 'variables';
+@import 'mixins';
+@import 'globals';
+
+// Components
+@import 'components/table';
+
+// Layouts
+@import 'layouts/footer';
+
+// Pages
+@import 'pages/index';
+@import 'pages/404';

@@ -1,0 +1,27 @@
+.not_found_page  {
+    font-family: $inter;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    img {
+        margin-bottom: 40px;
+        width: 40%;
+        @include breakpoints-down(sm) {
+            width: 90%;
+        }
+    }
+
+    h3 {
+        margin-bottom: 8px;
+    }
+    
+    button {
+        padding: 8px 48px;
+        color: $color-light;
+        background: $color-secondary;
+        border-radius: $md;
+    }
+}

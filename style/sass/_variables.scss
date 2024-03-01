@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Mulish:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap');
+
+// Fonts
+$inter: 'Inter', sans-serif;
+$mulish: 'Mulish', sans-serif;
+$poppins: 'Poppins', sans-serif;
+$open-sans: 'Open Sans', sans-serif;
+
+// Colors
+$color-primary: #F58465;
+$color-secondary: #1D82AA;
+$color-light: #FFFFFF;
+$color-dark: #202020;
+$color-gray: #606060;
+$color-soft-gray: #D9DCE7;
+$color-red: #E26D66;
+$color-soft-red: #FFDCDC;
+
+// Transition
+$main-transition: all 0.5s ease;
+
+// Box-shadow
+$main-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1), 0px 2px 6px rgba(0, 0, 0, 0.05);
+
+// Border Radius
+$xs: 3px;
+$sm: 6px;
+$md: 10px;
+$lg: 40px;
